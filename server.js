@@ -58,9 +58,13 @@ io.on('connection', function(socket){
         console.log(obj);
         io.emit('pollVisibility', obj);
     })
-    socket.on('show pollResults', function (obj){
+    socket.on('pollSent', function (obj){
         console.log(obj);
-        io.emit('show pollResults', obj);
+        io.emit('pollSent', obj);
+    })
+    socket.on('pollResults', function (obj){
+        console.log(obj);
+        io.emit('pollResults', obj);
     })
 })
 
